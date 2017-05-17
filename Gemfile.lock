@@ -28,8 +28,12 @@ GEM
     colorize (0.7.5)
     confluence-client (0.0.8)
     diff-lcs (1.2.5)
+    docker-api (1.33.4)
+      excon (>= 0.38.0)
+      json
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
+    excon (0.55.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -108,8 +112,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 4)
   colorize
   confluence-client
+  docker-api
   jira-ruby
   parseconfig
   pry
@@ -122,4 +128,4 @@ DEPENDENCIES
   specinfra (~> 2.40)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
