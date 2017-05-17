@@ -3,11 +3,10 @@ source 'https://rubygems.org'
 gem "rake"
 gem "serverspec", '~> 2.20'
 gem "specinfra", '~> 2.40'
+gem "activesupport", '~> 4'
+gem "docker-api"
 gem "colorize"
 gem "parseconfig"
-gem "excon"
-gem "net-ssh", '~> 2.0'
-gem "mime-types-data", (RUBY_VERSION >= "2.0" ? "~> 3.0" : "~> 2.99")
 gem "rspec_junit_formatter", github: 'gooddata/rspec_junit_formatter',
                              branch: 'yut-qa-5784'
 gem 'rubocop', '~> 0.37'
