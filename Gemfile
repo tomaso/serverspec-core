@@ -7,6 +7,7 @@ gem "activesupport", '~> 4'
 gem "docker-api"
 gem "colorize"
 gem "parseconfig"
+gem "excon"
 gem "rspec_junit_formatter", github: 'gooddata/rspec_junit_formatter',
                              branch: 'yut-qa-5784'
 gem 'rubocop', '~> 0.37'
