@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.12
-Release:          1%{?dist}.gdc
+Release:          1%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -75,8 +75,8 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
-* Thu Mar 02 2017 Martin Ducar <martin.ducar@gooddata.com> 1.9.12-1%{?dist}.gdc
-- add docker backend dependencies
+* Wed May 17 2017 Martin Ducar <martin.ducar@gooddata.com> - 1.9.12-1%{?dist}.gdc1
+- docker backend add with el6 compatibility
 
 * Fri Jan 06 2017 Yury Tsarev <yury.tsarev@gooddata.com> 1.9.11-1%{?dist}.gdc
 - set serverspec backend early
