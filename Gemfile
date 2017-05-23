@@ -5,6 +5,7 @@ gem "serverspec", '~> 2.20'
 gem "specinfra", '~> 2.40'
 gem "activesupport", '~> 4'
 gem "docker-api"
+gem "net-ssh", '~> 2.0'
 gem "colorize"
 gem "parseconfig"
 gem "rspec_junit_formatter", github: 'gooddata/rspec_junit_formatter',

@@ -2,7 +2,7 @@
 
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
-Version:          1.9.12
+Version:          1.9.13
 Release:          1%{?dist}.gdc1
 
 Vendor:           GoodData
@@ -75,6 +75,9 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
+* Tue May 23 2017 Martin Ducar <martin.ducar@gooddata.com> - 1.9.13-1%{?dist}.gdc1
+- upgrade serverspec gem to support content_as_yaml
+
 * Wed May 17 2017 Martin Ducar <martin.ducar@gooddata.com> - 1.9.12-1%{?dist}.gdc1
 - docker backend add with el6 compatibility
 
