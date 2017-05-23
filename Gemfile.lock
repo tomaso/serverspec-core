@@ -95,7 +95,7 @@ GEM
       specinfra (~> 2.68)
     sfl (2.3)
     slop (3.6.0)
-    specinfra (2.40.0)
+    specinfra (2.68.0)
       net-scp
       net-ssh (>= 2.7, < 5.0)
       net-telnet
@@ -126,7 +126,7 @@ DEPENDENCIES
   rubocop (~> 0.37)
   rubocop-junit-formatter!
   serverspec (~> 2.20)
-  specinfra (~> 2.40)
+  specinfra (~> 2.68)
 
 BUNDLED WITH
    1.11.2
