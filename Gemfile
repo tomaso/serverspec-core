@@ -8,7 +8,7 @@ gem "docker-api"
 gem "net-ssh", '~> 2.0'
 gem "colorize"
 gem "parseconfig"
-gem "rspec_junit_formatter"
+gem "rspec_junit_formatter", '~> 0.3.0.pre5'
 gem 'rubocop', '~> 0.37'
 gem 'rubocop-junit-formatter', github: 'gooddata/rubocop-junit-formatter'
 
