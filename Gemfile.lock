@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/gooddata/rspec_junit_formatter.git
+  revision: fb5d3a80a549d4e837992efef90046649b625702
+  branch: master
+  specs:
+    rspec_junit_formatter (0.3.0.pre5)
+      builder (< 4)
+      rspec-core (>= 2, < 4, != 2.12.0)
+
+GIT
   remote: git://github.com/gooddata/rubocop-junit-formatter.git
   revision: a4c2442413cb8c38763ad0df72158a8f2a38ff65
   specs:
@@ -72,8 +81,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
-    rspec_junit_formatter (0.3.0.pre5)
-      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.37.2)
       parser (>= 2.3.0.4, < 3.0)
       powerpack (~> 0.1)
@@ -115,7 +122,7 @@ DEPENDENCIES
   pry
   rake
   rest-client
-  rspec_junit_formatter (~> 0.3.0.pre5)
+  rspec_junit_formatter!
   rubocop (~> 0.37)
   rubocop-junit-formatter!
   serverspec (~> 2.20)
