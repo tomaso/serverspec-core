@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.13
-Release:          3%{?dist}.gdc1
+Release:          2%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -75,9 +75,6 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
-* Wed Jun 14 2017 Roman Neuhauser <roman.neuhauser@gooddata.com> - 1.9.13-3%{?dist}.gdc1
-- update rspec_junit_formatter to 0.3.0.pre5
-
 * Tue May 23 2017 Martin Surovcak <martin.surovcak@gooddata.com> - 1.9.13-2%{?dist}.gdc1
 - update specinfra as previous build was buggy
 
