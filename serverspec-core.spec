@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.13
-Release:          4%{?dist}.gdc1
+Release:          5%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -75,6 +75,10 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
+* Thu Jun 15 2017 Andrey Arapov <andrey.arapov@gooddata.com> - 1.9.13-5%{?dist}.gdc1
+- SETI-537: revert two previous changes as they required ruby >2 which we do
+  not have in EL6.
+
 * Wed Jun 14 2017 Roman Neuhauser <roman.neuhauser@gooddata.com> - 1.9.13-4%{?dist}.gdc1
 - getting the previous revision to actually work
 
