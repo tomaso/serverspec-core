@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gooddata/rspec_junit_formatter.git
-  revision: 04dbb0b4c056fbbf740056a784486efdabaf7ef9
+  revision: 0941b57545a54f041febd680e51bbc8f0ed996d8
   branch: yut-qa-5784
   specs:
     rspec_junit_formatter (0.2.3)
