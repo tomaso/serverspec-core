@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.13
-Release:          6%{?dist}.gdc1
+Release:          7%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -75,6 +75,9 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
+* Fri Jul 27 2018 Michal Vanco <michal.vanco@gooddata.com> - 1.9.13-7%{?dist}.gdc1
+- SETI-1475: update rubocop version due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8418
+
 * Thu Jun 15 2017 Andrey Arapov <andrey.arapov@gooddata.com> - 1.9.13-6%{?dist}.gdc1
 - SETI-537: use patches from rspec_junit_formatter 0.3.0.pre5
 
