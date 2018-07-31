@@ -10,24 +10,17 @@ Group:            GoodData/Tools
 
 License:          ISC
 URL:              https://github.com/gooddata/serverspec-core
-Source0:          sources.tar
+Source0:          %{name}.tar.gz
 BuildArch:        x86_64
 BuildRoot:        %{_tmppath}/%{name}-%{version}-root
 
-%if "%{?dist}" == ".el6"
-Requires:         ruby193-rubygem-bundler >= 1.11.2-5, nc
-%else
-Requires:         rubygem-bundler nmap-ncat
-%endif
+BuildRequires:    rubygem-bundler git ruby-devel gcc-c++
 
 %prep
 %setup -q -c
 
 %build
-%if "%{?dist}" == ".el6"
-# Use scl on EL6
-sed -i '/rake/s/.*/scl enable ruby193 "bundle exec '\''rake $*'\'\"/ bin/serverspec
-%endif
+bundle install --standalone --binstubs --without=development
 
 %install
 rm -fr $RPM_BUILD_ROOT
@@ -61,16 +54,14 @@ GoodData ServerSpec integration - core package
 %attr(0755, root, root) %{install_dir}/cron_run.sh
 %attr(0755, root, root) %{install_dir}/Gemfile*
 %attr(0755, root, root) %{install_dir}/Rakefile
-%attr(0755, root, root) %{install_dir}/serverspec-core.spec
 %attr(0755, root, root) %{install_dir}/spec/spec_helper.rb
 %attr(0755, root, root) %{install_dir}/spec/common/test/hosts_spec.rb
 %attr(0755, root, root) %doc %{install_dir}/*.md
 %attr(0755, root, root) %doc %{install_dir}/LICENSE.txt
 %attr(0644, root, root) %config(noreplace) %{_sysconfdir}/sysconfig/serverspec
 %attr(0755, root, root) /usr/bin/serverspec
-%exclude %{install_dir}/Makefile
 %exclude %{install_dir}/makemeusable
-%exclude %{install_dir}/bundle.log
+%exclude %{install_dir}/specs/serverspec-core.spec
 %exclude %{install_dir}/reports/.gitignore
 %exclude %{install_dir}/spec/types/.gitignore
 
