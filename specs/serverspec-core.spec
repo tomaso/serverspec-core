@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.13
-Release:          7%{?dist}.gdc1
+Release:          8%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -15,6 +15,7 @@ BuildArch:        x86_64
 BuildRoot:        %{_tmppath}/%{name}-%{version}-root
 
 BuildRequires:    rubygem-bundler git ruby-devel gcc-c++
+Requires:         rubygem-bundler
 
 %prep
 %setup -q -c
@@ -66,6 +67,9 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
+* Tue Aug 07 2018 Adam Tkac <adam.tkac@gooddata.com> - 1.9.13-8%{?dist}.gdc1
+- add rubygem-bundler Require
+
 * Fri Jul 27 2018 Michal Vanco <michal.vanco@gooddata.com> - 1.9.13-7%{?dist}.gdc1
 - SETI-1475: update rubocop version due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8418
 
