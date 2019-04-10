@@ -54,18 +54,18 @@ class ServerspecTask < RSpec::Core::RakeTask
     else
       @rspec_opts += ['-c']
     end
-    system("env TARGET_HOST=#{target} TARGET_LABELS=#{(labels || [])
+    success = system("env TARGET_HOST=#{target} TARGET_LABELS=#{(labels || [])
            .join(',')} #{spec_command}")
-    status(target, json) if verbose
+    status(target, json, success) if verbose
   end
 
   # Display status of a test from its JSON output
-  def status(target, json)
+  def status(target, json, success)
     out = JSON.parse(File.read(json))
     summary = out['summary']
     total = summary['example_count']
     failures = summary['failure_count']
-    if failures > 0
+    if !success or failures > 0
       print format('[%-3s/%-4s] ', failures, total).yellow, target, "\n"
       ExitStatus.code = 1
     else
