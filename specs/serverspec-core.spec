@@ -3,7 +3,7 @@
 Name:             serverspec-core
 Summary:          GoodData ServerSpec integration
 Version:          1.9.13
-Release:          8%{?dist}.gdc1
+Release:          9%{?dist}.gdc1
 
 Vendor:           GoodData
 Group:            GoodData/Tools
@@ -67,6 +67,12 @@ GoodData ServerSpec integration - core package
 %exclude %{install_dir}/spec/types/.gitignore
 
 %changelog
+* Thu Jan 02 2020 King Nguyen <king.nguyen@gooddata.com> - 1.9.13-9%{?dist}.gdc1
+- CONFIG: SETI-3728 Bump version of package to 1.9.13-9
+
+* Wed Apr 10 2019 Robert Moucha <robert.moucha@gooddata.com> - 1.9.13-9%{?dist}.gdc1
+- TRIVIAL: Do not throw out the rspec exit code
+
 * Tue Aug 07 2018 Adam Tkac <adam.tkac@gooddata.com> - 1.9.13-8%{?dist}.gdc1
 - add rubygem-bundler Require
 
