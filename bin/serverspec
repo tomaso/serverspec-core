@@ -1,4 +1,6 @@
 #!/bin/bash
 set -e
 cd /opt/gdc/serverspec-core
+source @@SCL_PREFIX@@/enable
+
 bundle exec "rake $*"
